@@ -340,23 +340,22 @@ function Checkout({
       }
   
       const response = await fetch(
-        "http://127.0.0.1:8000/api/orders",
+        "https://anuraj-store.onrender.com/api/orders",
         {
           method: "POST",
           body: formData,
         }
       );
-  
+      
       const data = await response.json();
-  
+      
       if (!response.ok) {
         throw new Error(
           data.detail || "Failed to place order."
         );
       }
-  
+      
       console.log("REAL ORDER:", data);
-  
       // Backend order number use गर्ने
       const order = {
         orderId: data.order_number,
@@ -1420,7 +1419,7 @@ function SellerLogin({ onSuccess, onBack }) {
 
     setLoading(true);
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/admin/login", {
+      const response = await fetch("https://anuraj-store.onrender.com/api/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ identifier: identifier.trim(), password }),
@@ -1487,7 +1486,7 @@ function AdminPanel({ onBack, products, onProductsChange }) {
   const [filterStatus, setFilterStatus] = useState("all");
   const [activeTab, setActiveTab] = useState("dashboard");
 
-  const API_URL = "http://127.0.0.1:8000";
+  const API_URL = "https://anuraj-store.onrender.com";
 
   const statuses = [
     "pending",
@@ -2015,12 +2014,11 @@ function AdminReports({ orders, products }) {
 }
 
 function AdminSettings() {
-  const API_URL = "http://127.0.0.1:8000";
+  const API_URL = "https://anuraj-store.onrender.com";
   const [settings, setSettings] = useState(DEFAULT_STORE_SETTINGS);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
-
   useEffect(() => {
     async function load() {
       try {
@@ -2219,7 +2217,7 @@ function TrackOrder({ onBack, onHelp }) {
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const API_URL = "http://127.0.0.1:8000";
+  const API_URL = "https://anuraj-store.onrender.com";
   const statuses = ["pending", "confirmed", "processing", "shipped", "delivered"];
   const labels = { pending: "Order Received", confirmed: "Confirmed", processing: "Processing", shipped: "Shipped", delivered: "Delivered", cancelled: "Cancelled" };
 
@@ -2378,7 +2376,7 @@ function App() {
 
     window.addEventListener("storage", onStorage);
 
-    fetch("http://127.0.0.1:8000/api/settings")
+    fetch("https://anuraj-store.onrender.com/api/settings")
       .then((r) => r.json())
       .then((data) => {
         if (data.settings) {
@@ -3222,4 +3220,3 @@ createRoot(
 ).render(
   <App />
 );
-
