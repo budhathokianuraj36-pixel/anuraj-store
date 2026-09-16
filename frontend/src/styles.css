@@ -1,0 +1,2713 @@
+/* =========================================================
+   ANURAJ STORE - HOME PAGE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f7f9;
+  color: #111827;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+  height: 75px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 7%;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.logo span,
+.footerLogo span {
+  color: #ff6b00;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  max-width: 650px;
+  margin: auto;
+}
+
+.search input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: 0 16px;
+  font-size: 15px;
+  outline: none;
+}
+
+.search button {
+  width: 55px;
+  border: none;
+  background: #ff6b00;
+  color: white;
+  border-radius: 0 8px 8px 0;
+}
+
+.cartButton {
+  border: none;
+  background: #111827;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.cartCount {
+  background: #ff6b00;
+  border-radius: 50%;
+  padding: 3px 7px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+/* NAV */
+
+.nav {
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 5%;
+  border-bottom: 1px solid #eee;
+  overflow-x: auto;
+}
+
+.nav button {
+  border: none;
+  background: transparent;
+  padding: 9px 15px;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+
+.nav button:hover,
+.nav button.active {
+  background: #fff0e6;
+  color: #ff6b00;
+}
+
+/* HERO */
+
+.hero {
+  margin: 30px auto;
+  width: 86%;
+  max-width: 1250px;
+  min-height: 350px;
+  background: linear-gradient(120deg, #111827, #283548);
+  color: white;
+  border-radius: 20px;
+  padding: 55px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.heroSmall {
+  color: #ff8a3d;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.hero h1 span {
+  color: #ff7414;
+}
+
+.hero p {
+  color: #d1d5db;
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+.shopButton {
+  margin-top: 25px;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b00;
+  color: white;
+  font-weight: bold;
+}
+
+.shopButton:hover {
+  background: #e85d00;
+}
+
+.heroImage {
+  font-size: 180px;
+}
+
+/* SECTIONS */
+
+.section {
+  width: 86%;
+  max-width: 1250px;
+  margin: 50px auto;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+.categoryCard {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 25px 10px;
+  transition: .2s;
+}
+
+.categoryCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.categoryCard div {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.sectionTitle h2 {
+  margin-bottom: 5px;
+}
+
+.sectionTitle p {
+  color: #6b7280;
+}
+
+.sectionTitle > span {
+  color: #6b7280;
+}
+
+/* PRODUCTS */
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.productCard {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #eee;
+  transition: .2s;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.1);
+}
+
+.discount {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ff3b30;
+  color: white;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.productImage {
+  height: 220px;
+  background: #f4f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+}
+
+.productInfo {
+  padding: 18px;
+}
+
+.productInfo small {
+  color: #ff6b00;
+  font-weight: bold;
+}
+
+.productInfo h3 {
+  font-size: 17px;
+  margin: 8px 0;
+  min-height: 42px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.oldPrice {
+  color: #9ca3af;
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.addButton {
+  width: 100%;
+  margin-top: 15px;
+  border: none;
+  background: #ff6b00;
+  color: white;
+  padding: 12px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.addButton:hover {
+  background: #e85d00;
+}
+
+.noProducts {
+  background: white;
+  padding: 50px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* FEATURES */
+
+.features {
+  width: 86%;
+  max-width: 1250px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.features div {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.features h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.features p {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #111827;
+  color: white;
+  padding: 45px 7%;
+  text-align: center;
+}
+
+.footerLogo {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #9ca3af;
+  margin: 8px;
+}
+
+/* CART */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  z-index: 100;
+}
+
+.cartPanel {
+  background: white;
+  width: 430px;
+  max-width: 95%;
+  height: 100%;
+  margin-left: auto;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.cartHeader button {
+  border: none;
+  background: #f3f4f6;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+.emptyCart {
+  text-align: center;
+  margin-top: 100px;
+  color: #6b7280;
+}
+
+.emptyCart div {
+  font-size: 60px;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cartEmoji {
+  font-size: 40px;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cartItemInfo {
+  flex: 1;
+}
+
+.cartItemInfo p {
+  margin-top: 5px;
+  color: #ff6b00;
+  font-weight: bold;
+}
+
+.removeCart {
+  border: none;
+  background: transparent;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.quantity button {
+  width: 27px;
+  height: 27px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.quantity span {
+  min-width: 22px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 25px 0;
+}
+
+.checkoutButton {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b00;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.checkoutButton:hover {
+  background: #e85d00;
+}
+
+/* MOBILE HOME */
+
+@media (max-width: 900px) {
+
+  .header {
+    padding: 12px 4%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .search {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .hero {
+    width: 94%;
+  }
+
+  .categoryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 35px 25px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .section {
+    width: 94%;
+  }
+
+  .categoryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+}
+.checkoutError {
+  max-width: 1200px;
+  margin: 15px auto;
+  padding: 14px 18px;
+  background: #fff0f0;
+  border: 1px solid #ffb3b3;
+  color: #c62828;
+  border-radius: 10px;
+  font-weight: 600;
+}
+/* =========================================================
+   ANURAJ STORE — PREMIUM CHECKOUT
+   Daraz-inspired • Clean • Professional
+========================================================= */
+
+/* PAGE */
+
+.checkoutPage {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 22px 20px 60px;
+  color: #222;
+}
+
+/* =========================================================
+   CHECKOUT TOP BAR
+========================================================= */
+
+.checkoutTop {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 18px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkoutTop h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.backButton {
+  justify-self: start;
+
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+
+  padding: 10px 16px;
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: .2s ease;
+}
+
+.backButton:hover {
+  border-color: #f57224;
+  color: #f57224;
+  background: #fff8f4;
+}
+
+.secureCheckout {
+  justify-self: end;
+
+  color: #388e3c;
+  font-size: 13px;
+  font-weight: 600;
+
+  background: #edf7ee;
+  border: 1px solid #cde8cf;
+  padding: 9px 13px;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.checkoutError {
+  max-width: 1180px;
+  margin: 0 auto 18px;
+
+  padding: 13px 16px;
+
+  background: #fff2f2;
+  border: 1px solid #ffcaca;
+  border-left: 4px solid #d32f2f;
+
+  color: #d32f2f;
+
+  border-radius: 4px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   MAIN CHECKOUT LAYOUT
+========================================================= */
+
+.checkoutLayout {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 370px;
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+.checkoutMain {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================================
+   CHECKOUT CARDS
+========================================================= */
+
+.checkoutCard {
+  background: #fff;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+
+  padding: 24px;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.checkoutCardTitle {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.stepNumber {
+  width: 32px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f57224;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 3px 8px rgba(245, 114, 36, .2);
+}
+
+.checkoutCardTitle h2 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.checkoutCardTitle p {
+  margin: 4px 0 0;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.formGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px 16px;
+}
+
+.formGroup {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup.full {
+  grid-column: 1 / -1;
+}
+
+.formGroup label {
+  margin-bottom: 7px;
+
+  color: #333;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.formGroup label span {
+  color: #999;
+  font-weight: 400;
+}
+
+/* INPUTS */
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+
+  background: #fff;
+
+  color: #333;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+.formGroup input,
+.formGroup select {
+  height: 44px;
+  padding: 0 13px;
+}
+
+.formGroup textarea {
+  min-height: 85px;
+
+  padding: 12px 13px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #aaa;
+}
+
+.formGroup input:hover,
+.formGroup select:hover,
+.formGroup textarea:hover {
+  border-color: #bbb;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: #f57224;
+
+  box-shadow: 0 0 0 3px rgba(245, 114, 36, .10);
+
+  background: #fff;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.error {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #d32f2f;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   PAYMENT METHODS
+========================================================= */
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.paymentOption {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 70px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #dedede;
+  border-radius: 5px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    box-shadow .2s ease,
+    transform .15s ease;
+}
+
+.paymentOption:hover {
+  border-color: #f57224;
+  background: #fffaf7;
+}
+
+.paymentOption.selected {
+  border-color: #f57224;
+
+  background: #fff8f3;
+
+  box-shadow:
+    0 0 0 1px #f57224,
+    0 4px 12px rgba(245, 114, 36, .08);
+}
+
+.paymentOption input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* PAYMENT ICON */
+
+.paymentIcon {
+  width: 43px;
+  height: 43px;
+
+  flex: 0 0 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 13px;
+
+  border-radius: 7px;
+
+  background: #f5f5f5;
+
+  font-size: 22px;
+}
+
+.paymentOption.selected .paymentIcon {
+  background: #fff;
+}
+
+/* PAYMENT TEXT */
+
+.paymentText {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.paymentText strong {
+  color: #333;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.paymentText span {
+  color: #888;
+
+  font-size: 12px;
+}
+
+/* RADIO */
+
+.radioCircle {
+  width: 22px;
+  height: 22px;
+
+  flex: 0 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 10px;
+
+  border: 2px solid #ccc;
+  border-radius: 50%;
+
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.paymentOption.selected .radioCircle {
+  border-color: #f57224;
+
+  background: #f57224;
+}
+
+/* COMING SOON */
+
+.comingSoon {
+  flex: 0 0 auto;
+
+  padding: 5px 8px;
+
+  border-radius: 3px;
+
+  background: #f3f3f3;
+
+  color: #999 !important;
+
+  font-size: 10px !important;
+  font-weight: 700;
+
+  letter-spacing: .4px;
+}
+
+/* =========================================================
+   BANK TRANSFER
+========================================================= */
+
+.bankBox {
+  margin-top: 18px;
+
+  padding: 20px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+
+  background: #fafafa;
+}
+
+.bankBox h3 {
+  margin: 0 0 15px;
+
+  color: #333;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* WARNING */
+
+.bankWarning {
+  margin-bottom: 16px;
+
+  padding: 11px 13px;
+
+  border-left: 3px solid #f5a623;
+
+  background: #fff8e8;
+
+  color: #8a6500;
+
+  border-radius: 3px;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* BANK DETAILS */
+
+.bankDetails {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1px;
+
+  margin-bottom: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+
+  background: #e2e2e2;
+}
+
+.bankDetails > div {
+  min-height: 75px;
+
+  padding: 13px;
+
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.bankDetails span {
+  color: #888;
+
+  font-size: 11px;
+}
+
+.bankDetails strong {
+  color: #333;
+
+  font-size: 13px;
+
+  word-break: break-word;
+}
+
+/* INSTRUCTIONS */
+
+.bankInstructions {
+  margin-bottom: 20px;
+
+  padding: 14px;
+
+  background: #fff;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+
+  color: #555;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.bankInstructions strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #333;
+}
+
+.bankInstructions ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.bankInstructions li {
+  margin-bottom: 3px;
+}
+
+/* =========================================================
+   PAYMENT SCREENSHOT UPLOAD
+========================================================= */
+
+.uploadBox {
+  position: relative;
+
+  min-height: 105px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  border: 1.5px dashed #cfcfcf;
+  border-radius: 5px;
+
+  background: #fff;
+
+  text-align: center;
+
+  transition: .2s ease;
+}
+
+.uploadBox:hover {
+  border-color: #f57224;
+  background: #fffaf7;
+}
+
+.uploadBox input[type="file"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+}
+
+.uploadLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 14px;
+
+  border: 1px solid #f57224;
+  border-radius: 4px;
+
+  background: #fff;
+
+  color: #f57224;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .2s ease;
+}
+
+.uploadLabel:hover {
+  background: #f57224;
+  color: #fff;
+}
+
+.uploadBox > small {
+  margin-top: 8px;
+
+  color: #999;
+
+  font-size: 11px;
+}
+
+/* PREVIEW */
+
+.screenshotPreview {
+  position: relative;
+
+  margin-top: 12px;
+
+  padding: 10px;
+
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  background: #fff;
+}
+
+.screenshotPreview img {
+  display: block;
+
+  width: 100%;
+  max-height: 260px;
+
+  object-fit: contain;
+
+  border-radius: 3px;
+
+  background: #f5f5f5;
+}
+
+.screenshotPreview button {
+  width: 100%;
+
+  margin-top: 8px;
+
+  padding: 8px;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  background: #fff;
+
+  color: #d32f2f;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.screenshotPreview button:hover {
+  border-color: #d32f2f;
+  background: #fff5f5;
+}
+
+/* =========================================================
+   SECURITY MESSAGE
+========================================================= */
+
+.checkoutSecurity {
+  padding: 13px 16px;
+
+  border: 1px solid #dcebdc;
+  border-radius: 4px;
+
+  background: #f3faf3;
+
+  color: #4b684b;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   ORDER SUMMARY
+========================================================= */
+
+.orderSummary {
+  position: sticky;
+  top: 95px;
+
+  background: #fff;
+
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, .05);
+}
+
+.orderSummary h2 {
+  margin: 0;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  color: #222;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* PRODUCTS */
+
+.summaryProducts {
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryProduct {
+  display: grid;
+
+  grid-template-columns: 62px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.summaryProductImage {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 1px solid #eee;
+  border-radius: 4px;
+
+  background: #f7f7f7;
+
+  font-size: 28px;
+}
+
+.summaryProductInfo {
+  min-width: 0;
+}
+
+.summaryProductInfo strong {
+  display: -webkit-box;
+
+  overflow: hidden;
+
+  color: #333;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  text-overflow: ellipsis;
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.summaryProductInfo span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #999;
+
+  font-size: 11px;
+}
+
+.summaryProduct > strong {
+  white-space: nowrap;
+
+  color: #333;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* PRICE */
+
+.summaryLine {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 0;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+.summaryLine strong {
+  color: #333;
+
+  font-weight: 600;
+}
+
+.summaryDivider {
+  height: 1px;
+
+  margin: 4px 0;
+
+  background: #ddd;
+}
+
+/* TOTAL */
+
+.summaryTotal {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 0 5px;
+}
+
+.summaryTotal span {
+  color: #333;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.summaryTotal strong {
+  color: #f57224;
+
+  font-size: 23px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   PLACE ORDER BUTTON
+========================================================= */
+
+.placeOrderButton {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 17px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: #f57224;
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 10px rgba(245, 114, 36, .20);
+
+  transition:
+    background .2s ease,
+    transform .15s ease,
+    box-shadow .2s ease;
+}
+
+.placeOrderButton:hover {
+  background: #d95d14;
+
+  box-shadow:
+    0 6px 16px rgba(245, 114, 36, .28);
+}
+
+.placeOrderButton:active {
+  transform: translateY(1px);
+}
+
+.placeOrderButton:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   ORDER TRUST
+========================================================= */
+
+.orderTrust {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 17px;
+  padding-top: 15px;
+
+  border-top: 1px solid #eeeeee;
+}
+
+.orderTrust > div {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+.orderTrust > div:first-child {
+  color: #444;
+}
+
+.orderTrust > div span {
+  flex: 1;
+}
+
+/* =========================================================
+   DESKTOP POLISH
+========================================================= */
+
+@media (min-width: 1100px) {
+
+  .checkoutPage {
+    padding-top: 28px;
+  }
+
+  .checkoutCard {
+    padding: 26px;
+  }
+
+  .orderSummary {
+    padding: 22px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .checkoutLayout {
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 15px;
+  }
+
+  .checkoutCard {
+    padding: 20px;
+  }
+
+  .orderSummary {
+    top: 85px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .checkoutPage {
+    padding: 15px 12px 40px;
+  }
+
+  .checkoutTop {
+    grid-template-columns: 1fr auto;
+
+    gap: 10px;
+  }
+
+  .checkoutTop h1 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+
+    text-align: left;
+
+    font-size: 24px;
+    order: -1;
+  }
+
+  .backButton {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .secureCheckout {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .checkoutLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .orderSummary {
+    position: static;
+
+    order: 2;
+  }
+
+  .checkoutMain {
+    order: 1;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .checkoutPage {
+    padding: 10px 8px 30px;
+  }
+
+  .checkoutTop {
+    margin-bottom: 14px;
+  }
+
+  .checkoutTop h1 {
+    font-size: 22px;
+  }
+
+  .backButton {
+    padding: 9px 11px;
+
+    font-size: 12px;
+  }
+
+  .secureCheckout {
+    padding: 8px 9px;
+
+    font-size: 11px;
+  }
+
+  .checkoutCard {
+    padding: 16px;
+
+    border-radius: 5px;
+  }
+
+  .checkoutCardTitle {
+    gap: 10px;
+
+    padding-bottom: 16px;
+    margin-bottom: 18px;
+  }
+
+  .stepNumber {
+    width: 29px;
+    height: 29px;
+
+    flex-basis: 29px;
+  }
+
+  .checkoutCardTitle h2 {
+    font-size: 17px;
+  }
+
+  .checkoutCardTitle p {
+    font-size: 11px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .formGroup.full {
+    grid-column: auto;
+  }
+
+  .formGroup input,
+  .formGroup select {
+    height: 43px;
+  }
+
+  .paymentOption {
+    min-height: 64px;
+
+    padding: 10px;
+  }
+
+  .paymentIcon {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+
+    margin-right: 10px;
+
+    font-size: 19px;
+  }
+
+  .paymentText strong {
+    font-size: 13px;
+  }
+
+  .paymentText span {
+    font-size: 11px;
+  }
+
+  .radioCircle {
+    width: 20px;
+    height: 20px;
+
+    flex-basis: 20px;
+  }
+
+  .bankBox {
+    padding: 14px;
+  }
+
+  .bankDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .bankDetails > div {
+    min-height: 65px;
+  }
+
+  .summaryProduct {
+    grid-template-columns: 55px minmax(0, 1fr) auto;
+
+    gap: 8px;
+  }
+
+  .summaryProductImage {
+    width: 55px;
+    height: 55px;
+
+    font-size: 24px;
+  }
+
+  .summaryProductInfo strong {
+    font-size: 12px;
+  }
+
+  .summaryProduct > strong {
+    font-size: 12px;
+  }
+
+  .summaryTotal strong {
+    font-size: 21px;
+  }
+
+  .placeOrderButton {
+    height: 49px;
+  }
+
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .checkoutTop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .checkoutTop h1 {
+    width: 100%;
+
+    order: -1;
+  }
+
+  .backButton {
+    flex: 1;
+  }
+
+  .secureCheckout {
+    flex: 1;
+
+    text-align: center;
+  }
+
+  .summaryProduct {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .summaryProductImage {
+    width: 48px;
+    height: 48px;
+  }
+
+  .summaryProduct > strong {
+    grid-column: 2;
+  }
+
+}
+/* =========================================================
+   ANURAJ STORE — ORDER SUCCESS PAGE
+========================================================= */
+
+.successPage {
+  min-height: calc(100vh - 80px);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 77, 0, 0.08), transparent 32%),
+    #f5f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 55px 20px 80px;
+}
+
+/* Main card */
+.successCard {
+  width: 100%;
+  max-width: 720px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 18px;
+  padding: 42px 44px 40px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top orange line */
+.successCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff4d00, #ff6b1a);
+}
+
+/* Success icon */
+.successIcon {
+  width: 78px;
+  height: 78px;
+  margin: 4px auto 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf8ef;
+  border: 7px solid #f4fcf6;
+
+  color: #18a957;
+  font-size: 38px;
+  font-weight: 800;
+
+  box-shadow:
+    0 0 0 1px rgba(24, 169, 87, 0.12),
+    0 8px 22px rgba(24, 169, 87, 0.12);
+}
+
+/* Heading */
+.successCard h1 {
+  margin: 0;
+  color: #222;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.successCard > p {
+  margin: 12px 0 28px;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.successCard > p strong {
+  color: #ff4d00;
+  font-weight: 700;
+}
+
+/* =========================================================
+   ORDER ID
+========================================================= */
+
+.orderIdBox {
+  background: #fff7f2;
+  border: 1px solid #ffd9c7;
+  border-radius: 12px;
+  padding: 15px 18px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  text-align: left;
+}
+
+.orderIdBox span {
+  color: #777;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.orderIdBox strong {
+  color: #ff4d00;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  word-break: break-all;
+}
+
+/* =========================================================
+   CUSTOMER DETAILS
+========================================================= */
+
+.successDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.successDetails > div {
+  min-height: 76px;
+
+  background: #fafafa;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+
+  padding: 15px 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: left;
+
+  transition: 0.2s ease;
+}
+
+.successDetails > div:hover {
+  border-color: #ffd1bd;
+  background: #fffaf7;
+}
+
+.successDetails span {
+  display: block;
+  color: #888;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.successDetails strong {
+  display: block;
+  color: #252525;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+/* Total highlight */
+.successDetails > div:last-child {
+  background: #fff8f4;
+  border-color: #ffd7c5;
+}
+
+.successDetails > div:last-child strong {
+  color: #ff4d00;
+  font-size: 18px;
+}
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.successMessage {
+  background: #f6fbf8;
+  border: 1px solid #dcefe4;
+  border-radius: 12px;
+
+  padding: 17px 18px;
+  margin-bottom: 25px;
+
+  color: #4c5b52;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.successMessage::first-line {
+  color: #18884a;
+  font-weight: 700;
+}
+
+/* =========================================================
+   CONTINUE SHOPPING BUTTON
+========================================================= */
+
+.continueShoppingButton {
+  width: 100%;
+  min-height: 50px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #ff4d00, #ff6418);
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 18px rgba(255, 77, 0, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.continueShoppingButton:hover {
+  background: linear-gradient(135deg, #e94300, #ff580b);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 77, 0, 0.28);
+}
+
+.continueShoppingButton:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+  .successPage {
+    padding: 35px 16px 60px;
+  }
+
+  .successCard {
+    padding: 36px 24px 30px;
+    border-radius: 16px;
+  }
+
+  .successIcon {
+    width: 70px;
+    height: 70px;
+    font-size: 34px;
+  }
+
+  .successCard h1 {
+    font-size: 25px;
+  }
+
+  .successDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .successDetails > div {
+    min-height: auto;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .successPage {
+    min-height: calc(100vh - 65px);
+    padding: 22px 12px 45px;
+    align-items: flex-start;
+  }
+
+  .successCard {
+    padding: 30px 16px 22px;
+    border-radius: 14px;
+  }
+
+  .successCard::before {
+    height: 4px;
+  }
+
+  .successIcon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+    border-width: 6px;
+    font-size: 30px;
+  }
+
+  .successCard h1 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .successCard > p {
+    font-size: 13px;
+    margin: 10px 0 22px;
+  }
+
+  .orderIdBox {
+    padding: 13px 14px;
+    gap: 10px;
+  }
+
+  .orderIdBox span {
+    font-size: 11px;
+  }
+
+  .orderIdBox strong {
+    font-size: 12px;
+    text-align: right;
+  }
+
+  .successDetails {
+    gap: 9px;
+    margin-bottom: 18px;
+  }
+
+  .successDetails > div {
+    padding: 13px 14px;
+    border-radius: 10px;
+  }
+
+  .successDetails span {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .successDetails strong {
+    font-size: 14px;
+  }
+
+  .successDetails > div:last-child strong {
+    font-size: 17px;
+  }
+
+  .successMessage {
+    padding: 14px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    margin-bottom: 19px;
+  }
+
+  .continueShoppingButton {
+    min-height: 47px;
+    font-size: 14px;
+    border-radius: 9px;
+  }
+}
+/* =========================================================
+   ANURAJ STORE — ADMIN PANEL
+   CSS ONLY
+========================================================= */
+
+/* ADMIN PAGE */
+.adminPage {
+  min-height: 100vh !important;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 107, 0, 0.07),
+      transparent 28%
+    ),
+    #f5f6f8 !important;
+  padding: 28px 24px !important;
+  box-sizing: border-box;
+  color: #1f2937;
+}
+
+/* MAIN ADMIN CONTAINER */
+.adminPage > div {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   ADMIN HEADER
+========================================================= */
+
+.adminPage h1 {
+  color: #111827;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.adminPage h2 {
+  color: #1f2937;
+  font-weight: 800;
+}
+
+.adminPage h3 {
+  color: #374151;
+}
+
+/* HEADER BUTTONS */
+.adminPage button {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.adminPage button:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ADMIN NAVIGATION
+========================================================= */
+
+/*
+   Existing JSX has inline styles.
+   These selectors target the navigation area
+   without changing JSX.
+*/
+
+.adminPage > div > div:nth-child(2) {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 15px !important;
+  padding: 7px !important;
+  box-shadow: 0 5px 20px rgba(16, 24, 40, 0.05);
+}
+
+/* Navigation buttons */
+.adminPage > div > div:nth-child(2) button {
+  min-height: 44px;
+  border-radius: 10px !important;
+  font-size: 13px;
+  font-weight: 750;
+  border: 1px solid transparent !important;
+}
+
+/* Navigation hover */
+.adminPage > div > div:nth-child(2) button:hover {
+  background: #fff3ec !important;
+  color: #ff6b00 !important;
+}
+
+/*
+   Active tab:
+   Inline background/color already exists,
+   so !important is used intentionally.
+*/
+.adminPage > div > div:nth-child(2) button[style*="rgb(17, 24, 39)"],
+.adminPage > div > div:nth-child(2) button[style*="#111827"] {
+  background: linear-gradient(
+    135deg,
+    #ff6b00,
+    #ff842e
+  ) !important;
+
+  color: #ffffff !important;
+
+  box-shadow:
+    0 6px 16px rgba(255, 107, 0, 0.22);
+}
+
+/* =========================================================
+   ADMIN STAT CARDS
+========================================================= */
+
+.adminPage
+  [style*="border-radius: 14px"] {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.adminPage
+  [style*="border-radius: 14px"]:hover {
+  transform: translateY(-2px);
+
+  border-color: #ffd2bd !important;
+
+  box-shadow:
+    0 10px 28px rgba(16, 24, 40, 0.08) !important;
+}
+
+/* =========================================================
+   WHITE ADMIN PANELS
+========================================================= */
+
+.adminPage
+  [style*="background: white"] {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   INPUTS / SELECT / TEXTAREA
+========================================================= */
+
+.adminPage input:not([type="checkbox"]),
+.adminPage select,
+.adminPage textarea {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.adminPage input:not([type="checkbox"]):hover,
+.adminPage select:hover,
+.adminPage textarea:hover {
+  border-color: #ffad85 !important;
+}
+
+.adminPage input:not([type="checkbox"]):focus,
+.adminPage select:focus,
+.adminPage textarea:focus {
+  outline: none !important;
+
+  border-color: #ff6b00 !important;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 107, 0, 0.10) !important;
+
+  background: #ffffff !important;
+}
+
+/* Search input */
+.adminPage input::placeholder,
+.adminPage textarea::placeholder {
+  color: #98a2b3;
+}
+
+/* =========================================================
+   CHECKBOXES
+========================================================= */
+
+.adminPage input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff6b00;
+  cursor: pointer;
+}
+
+/* =========================================================
+   ORDER TABLE
+========================================================= */
+
+.adminPage table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.adminPage thead tr {
+  background: #fafafa !important;
+}
+
+.adminPage th {
+  color: #667085 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.adminPage td {
+  color: #344054;
+}
+
+.adminPage td strong {
+  color: #1d2939;
+}
+
+.adminPage tbody tr {
+  transition: background 0.15s ease;
+}
+
+.adminPage tbody tr:hover {
+  background: #fffaf7;
+}
+
+/* Order status select */
+.adminPage table select {
+  min-height: 38px;
+  border-radius: 8px !important;
+  font-weight: 650 !important;
+  cursor: pointer;
+}
+
+.adminPage table select:hover {
+  border-color: #ff8b55 !important;
+}
+
+.adminPage table select:focus {
+  border-color: #ff6b00 !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.08) !important;
+}
+
+/* =========================================================
+   ERROR BOX
+========================================================= */
+
+.adminPage div[style*="#fef2f2"] {
+  border-radius: 12px !important;
+  box-shadow:
+    0 4px 14px rgba(180, 35, 24, 0.06);
+}
+
+/* =========================================================
+   PRODUCT / SALES / REPORT / SUPPORT CARDS
+========================================================= */
+
+.adminPage h2 + p,
+.adminPage h3 + p {
+  line-height: 1.6;
+}
+
+.adminPage p {
+  line-height: 1.55;
+}
+
+/* =========================================================
+   SETTINGS FORM
+========================================================= */
+
+.adminPage form {
+  width: 100%;
+}
+
+.adminPage form > div {
+  box-sizing: border-box;
+}
+
+/* Settings section cards */
+.adminPage form > div[style*="padding: 20px"] {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.adminPage form > div[style*="padding: 20px"]:hover {
+  border-color: #f0d7ca !important;
+
+  box-shadow:
+    0 7px 22px rgba(16, 24, 40, 0.055) !important;
+}
+
+/* Settings labels */
+.adminPage label {
+  color: #344054;
+}
+
+/* =========================================================
+   BUTTON POLISH
+========================================================= */
+
+.adminPage button:not(:disabled) {
+  cursor: pointer;
+}
+
+.adminPage button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* Orange action buttons */
+.adminPage button[style*="background: rgb(17, 24, 39)"],
+.adminPage button[style*="background: #111827"] {
+  background: linear-gradient(
+    135deg,
+    #ff6b00,
+    #ff8129
+  ) !important;
+
+  color: #ffffff !important;
+
+  border-color: #ff6b00 !important;
+
+  box-shadow:
+    0 5px 14px rgba(255, 107, 0, 0.18);
+}
+
+.adminPage button[style*="background: rgb(17, 24, 39)"]:hover,
+.adminPage button[style*="background: #111827"]:hover {
+  background: linear-gradient(
+    135deg,
+    #e95d00,
+    #ff6f14
+  ) !important;
+
+  box-shadow:
+    0 8px 18px rgba(255, 107, 0, 0.25);
+}
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.adminPage button[style*="#b42318"] {
+  border-color: #b42318 !important;
+
+  box-shadow:
+    0 4px 12px rgba(180, 35, 24, 0.12);
+}
+
+.adminPage button[style*="#b42318"]:hover {
+  background: #991b1b !important;
+  box-shadow:
+    0 7px 16px rgba(180, 35, 24, 0.18);
+}
+
+/* =========================================================
+   PRODUCT MANAGER
+========================================================= */
+
+.adminPage img {
+  max-width: 100%;
+}
+
+.adminPage [style*="borderRadius: 12px"] {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SELLER LOGIN PAGE
+========================================================= */
+
+/*
+   SellerLogin does not have a class.
+   These selectors target its existing structure.
+*/
+
+body:has(.adminPage) {
+  background: #f5f6f8;
+}
+
+/* Login card */
+main:not(.adminPage) {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MOBILE ADMIN
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .adminPage {
+    padding: 20px 14px 40px !important;
+  }
+
+  .adminPage > div {
+    max-width: 100%;
+  }
+
+  .adminPage h1 {
+    font-size: 25px !important;
+  }
+
+  .adminPage
+    > div
+    > div:first-child {
+    align-items: flex-start !important;
+  }
+
+  .adminPage
+    > div
+    > div:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .adminPage {
+    padding: 16px 10px 35px !important;
+  }
+
+  .adminPage
+    > div
+    > div:nth-child(2) {
+    gap: 5px !important;
+    padding: 6px !important;
+  }
+
+  .adminPage
+    > div
+    > div:nth-child(2)
+    button {
+    min-height: 41px;
+    padding: 8px 5px !important;
+    font-size: 11px;
+  }
+
+  .adminPage h1 {
+    font-size: 22px !important;
+  }
+
+  .adminPage h2 {
+    font-size: 18px;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .adminPage {
+    padding: 12px 8px 30px !important;
+  }
+
+  .adminPage
+    > div
+    > div:first-child {
+    margin-bottom: 16px !important;
+  }
+
+  .adminPage
+    > div
+    > div:nth-child(2) {
+    grid-template-columns: 1fr 1fr !important;
+    border-radius: 12px !important;
+  }
+
+  .adminPage
+    > div
+    > div:nth-child(2)
+    button {
+    min-height: 40px;
+    font-size: 10.5px;
+    padding: 7px 4px !important;
+  }
+
+  .adminPage
+    [style*="padding: 18px"] {
+    padding: 14px !important;
+  }
+
+  .adminPage
+    [style*="padding: 20px"] {
+    padding: 15px !important;
+  }
+
+  .adminPage input:not([type="checkbox"]),
+  .adminPage select,
+  .adminPage textarea {
+    font-size: 13px !important;
+  }
+
+}
+
+/* =========================================================
+   VERY SMALL PHONE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .adminPage {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+
+  .adminPage
+    > div
+    > div:nth-child(2)
+    button {
+    font-size: 9.5px;
+  }
+
+}

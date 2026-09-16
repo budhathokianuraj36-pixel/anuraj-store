@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anuraj Store | Gadgets & Electronics</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="announcement">🚚 Delivery across Nepal • 💵 Cash on Delivery • 🔐 Secure checkout</div>
+<header class="header"><div class="nav">
+<a class="brand" href="#">Anuraj<span>Store</span></a>
+<div class="search"><input id="search" placeholder="Search products..." oninput="renderProducts()"><button onclick="renderProducts()">🔎</button></div>
+<nav><a href="#products">Products</a><a href="#categories">Categories</a><a href="#contact">Contact</a></nav>
+<button class="cartBtn" onclick="openCart()">🛒 <b id="cartCount">0</b></button>
+<button class="adminBtn" onclick="openAdmin()">Admin</button>
+</div></header>
+
+<main>
+<section class="hero"><div><span class="pill">NEW • NEPAL ONLINE STORE</span><h1>Smart products.<br><span>Better prices.</span></h1><p>Mobile accessories, audio, power, gaming and computer products—all in one place.</p><button class="primary" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">Shop now →</button></div><div class="heroArt">📱<span>⚡</span>🎧</div></section>
+
+<section class="section" id="categories"><div class="sectionHead"><h2>Shop by category</h2></div><div class="categories" id="categoryList"></div></section>
+<section class="section" id="products"><div class="sectionHead"><h2>Popular products</h2><span id="resultCount"></span></div><div class="grid" id="productGrid"></div></section>
+
+<section class="features"><div>🚚<b> Nepal Delivery</b><small>Zone-based delivery charges</small></div><div>💵<b> Cash on Delivery</b><small>Pay when you receive</small></div><div>💳<b> Online Payment</b><small>eSewa / Khalti ready</small></div><div>🛡️<b> Easy Support</b><small>Contact & order help</small></div></section>
+
+<section class="contact section" id="contact"><div><h2>Need help?</h2><p>Update these details from Admin → Store Settings.</p></div><div><b>📞 +977-98XXXXXXXX</b><br><b>✉️ anurajstore@example.com</b><br>📍 Kathmandu, Nepal</div></section>
+</main>
+
+<div class="modal" id="cartModal"><div class="modalBox"><button class="x" onclick="closeModal('cartModal')">×</button><h2>Your cart</h2><div id="cartItems"></div><div class="total" id="cartTotal"></div><button class="primary full" onclick="checkout()">Proceed to checkout</button></div></div>
+
+<div class="modal" id="checkoutModal"><div class="modalBox"><button class="x" onclick="closeModal('checkoutModal')">×</button><h2>Checkout</h2>
+<form id="checkoutForm" onsubmit="placeOrder(event)">
+<input required placeholder="Full name" id="cName"><input required placeholder="Phone number" id="cPhone">
+<select required id="cProvince"><option value="">Province</option><option>Koshi</option><option>Madhesh</option><option>Bagmati</option><option>Gandaki</option><option>Lumbini</option><option>Karnali</option><option>Sudurpashchim</option></select>
+<input required placeholder="District / City" id="cCity"><textarea required placeholder="Full delivery address" id="cAddress"></textarea>
+<select id="cPayment"><option>Cash on Delivery</option><option>eSewa (merchant setup required)</option><option>Khalti (merchant setup required)</option><option>Bank Transfer</option></select>
+<button class="primary full">Place order</button></form></div></div>
+
+<div class="modal" id="adminModal"><div class="modalBox adminBox"><button class="x" onclick="closeModal('adminModal')">×</button><div id="adminContent"></div></div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body></html>
